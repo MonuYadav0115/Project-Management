@@ -8,7 +8,7 @@ import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import ProjectDetail from "./pages/ProjectDetail";
 
-// pages jo abhi banani hain - import ready rakho
+// Pages yet to be created – Keep them import-ready.
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import VerifyEmail from "./pages/VerifyEmail";
@@ -16,7 +16,7 @@ import TaskDetail from "./pages/TaskDetail";
 import Members from "./pages/Members";
 import Notes from "./pages/Notes";
 
-// ProtectedRoute - token ke saath user bhi check karo
+// ProtectedRoute - Verify the user along with the token.
 const ProtectedRoute = ({ children }) => {
   const { user, token } = useAuth();
 
@@ -27,7 +27,8 @@ const ProtectedRoute = ({ children }) => {
   return children;
 };
 
-// PublicRoute - agar already logged in hai toh login/register pe mat jaao
+// PublicRoute - If the user is already logged in, do not navigate to the Login/Register page.
+
 const PublicRoute = ({ children }) => {
   const { user, token } = useAuth();
 
@@ -41,7 +42,7 @@ const PublicRoute = ({ children }) => {
 function AppRoutes() {
   return (
     <Routes>
-      {/* public routes - sirf logged out user ke liye */}
+      {/* Public Routes – For Logged-Out Users Only*/}
       <Route
         path="/login"
         element={
@@ -69,7 +70,6 @@ function AppRoutes() {
       <Route path="/reset-password/:resetToken" element={<ResetPassword />} />
       <Route path="/verify-email/:verificationToken" element={<VerifyEmail />} />
 
-      {/* protected routes - sirf logged in user ke liye */}
       <Route
         path="/dashboard"
         element={

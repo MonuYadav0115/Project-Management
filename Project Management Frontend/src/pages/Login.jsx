@@ -33,7 +33,7 @@ const Login = () => {
 
       <div className="bg-[#1a1a2e] p-10 rounded-2xl shadow-2xl w-full max-w-md">
 
-        {/* Logo - same as Register page */}
+  
         <div className="flex items-center justify-center gap-3 mb-6">
           <div className="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center text-white font-bold text-sm">
             PC

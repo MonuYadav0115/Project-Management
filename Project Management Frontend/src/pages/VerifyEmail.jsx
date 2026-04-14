@@ -12,7 +12,8 @@ const VerifyEmail = () => {
   const { verificationToken } = useParams();
   const navigate = useNavigate();
 
-  // page open hote hi automatically verify karo
+// open the page and verify it automatically
+
   useEffect(() => {
     const verify = async () => {
       try {
